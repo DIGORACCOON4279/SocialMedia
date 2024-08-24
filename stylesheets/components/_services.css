@@ -70,6 +70,14 @@
     transform: translateY(-120%) scale(0%);
     transition: transform 0.3s ease-in-out;
 }
+.section-services .cards-services .services:nth-child(1):hover::before,
+.section-services .cards-services .services:nth-child(3):hover::before,
+.section-services .cards-services .services:nth-child(5):hover::before{
+    content:"";
+    background-color: var( --light-red-opacity);
+    box-shadow:  0 0 32px 1px var(--black);
+    clip-path: circle(100% at 51% 34%);
+}
 .section-services .cards-services .services:nth-child(1):hover::after{
     content:"Mantente conectado con tus personas mas cercanas";
     transform: translateY(23%) scale(100%);
