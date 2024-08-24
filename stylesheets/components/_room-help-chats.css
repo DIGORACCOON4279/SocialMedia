@@ -1,0 +1,53 @@
+.navbar{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-nat);
+}
+.navbar .container-fluid .logo{
+    width: 55%;
+}
+.navbar .title{
+    padding: 50px 0px;
+}
+.navbar .title h2{
+    color: var(--white);
+    font-size: 45px;
+    font-weight: 600;
+    padding: 0px 50px;
+    font-family: var(--header-font);
+}
+.subtitle-container{
+    display: flex;
+    align-items: center;
+    margin: 30px 50px 0px 50px;
+    border-bottom:  1px solid var(--gray);
+}
+.subtitle-container i{
+    font-size: 40px;
+    color: var(--light-blue);
+}
+.subtitle-container h3{
+    font-size: 40px;
+    color: var(--black);
+}
+.subtitle-container .clasification{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.subtitle-container .clasification .option{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+}
+.subtitle-container .clasification .option .bx{
+    font-size: 20px;
+}
+.subtitle-container .clasification .option .link{
+    font-size: 16px;
+}

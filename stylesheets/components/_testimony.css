@@ -1,0 +1,85 @@
+.section-testimonies{
+    width: 100%;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 150px;
+    background-color: var(--deep-gray);
+}
+.section-testimonies .subtitle{
+    color: var(--gray);
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 150px;
+    padding-top: 150px;
+    font-family: var(--headers-font);
+}
+.section-testimonies .cards-testimonies{
+    width: 90%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.section-testimonies .cards-testimonies .card{
+    width: 320px;
+    height: auto;
+    padding:  20px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--light-blue);
+    background-color: var(--almost-black);
+    overflow: hidden;
+    transition: .5s;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.section-testimonies .cards-testimonies .card .avatar{
+    width: 40px;
+    height: auto;
+}
+.section-testimonies .cards-testimonies .card:hover{
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 3px var(--blue);
+}
+.section-testimonies .cards-testimonies .card .text-1 h3{
+    color:var(--light-blue);
+    font-family: var(--headers-font);
+    font-size: 16px;
+}
+.section-testimonies .cards-testimonies .card p{
+    color:var(--light-gray);
+    font-family: var(--body-font);
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    text-wrap:balance;
+}
+.section-testimonies .cards-testimonies .card .text-1{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.section-testimonies .cards-testimonies .card .text-2{
+    width:100%;
+    height:auto;
+    display: grid;
+    grid-auto-rows: minmax(60px, auto);
+}
+.section-testimonies .cards-testimonies .card .text-2 p{
+    text-align: left;
+}
+.section-testimonies .cards-testimonies .card .rating-stars{
+    width:30%;
+    align-self:end;
+    justify-self: end;
+}

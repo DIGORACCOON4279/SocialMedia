@@ -1,0 +1,153 @@
+
+.section-services{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+    margin: auto;
+    background-color: var( --deep-gray);
+}
+.section-services .subtitle{
+    color: var(--gray);
+    font-size: 30px ;
+    font-weight: 600;
+    padding-bottom: 150px;
+    padding-top: 150px;
+    text-align: center;
+    font-family: var(--headers-font);
+}
+.section-services .cards-services{
+    width:80%;
+    height: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap:90px;
+
+}
+.section-services .cards-services .services{
+    position:relative;
+    width: 250px;
+    height: 300px;
+    background-color:#1F252D ;
+    text-align:center;
+    border-radius: 8px;
+    padding-bottom: 30px;
+    cursor: pointer;
+    padding-top:20px;
+    margin: auto;
+}
+.section-services .cards-services .services::before{
+    content:"";
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    margin:auto;
+    clip-path: circle(18.9% at 50% 23%);
+    transition: .2s ease-in-out;
+}
+
+/* Services - Odd */
+
+.section-services .cards-services .services::after{
+    content:"";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+    color:var( --light-gray);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--body-font);
+    transform: translateY(-120%) scale(0%);
+    transition: transform 0.3s ease-in-out;
+}
+.section-services .cards-services .services:nth-child(1):hover::after{
+    content:"Mantente conectado con tus personas mas cercanas";
+    transform: translateY(23%) scale(100%);
+    color: var(--light-gray);
+    font-size: 14px ;
+    text-wrap:balance;
+}
+.section-services .cards-services .services:nth-child(3):hover::after{
+    content:"Dejanos tu seguridad en nuestras manos mientras chateas con los tuyos";
+    transform: translateY(23%) scale(100%);
+    color: var(--light-gray);
+    font-size: 14px ;
+    text-wrap:balance;
+}
+.section-services .cards-services .services:nth-child(5):hover::after{
+    content:"Perfil seguro, confidencialidad y recomendaciones en tiempo real";
+    transform: translateY(23%) scale(100%);
+    color: var(--light-gray);
+    font-size: 14px ;
+    text-wrap:balance;
+}
+.section-services .cards-services .services:hover > .title-card{
+    content:"";
+    display: none;
+}
+
+/* Services - Even */
+
+.section-services .cards-services .services:nth-child(2):hover::before,
+.section-services .cards-services .services:nth-child(4):hover::before,
+.section-services .cards-services .services:nth-child(6):hover::before{
+    content:"";
+    background-color: var( --light-blue-opacity);
+    box-shadow:  0 0 32px 1px var(--black);
+    clip-path: circle(100% at 51% 34%);
+}
+.section-services .cards-services .services:nth-child(2):hover::after{
+    content:"Administra tu perfil y crea tus grupos favoritos";
+    transform: translateY(23%) scale(100%);
+    color: var(--light-gray);
+    font-size: 14px ;
+    text-wrap:balance;
+}
+.section-services .cards-services .services:nth-child(4):hover::after{
+    content:"Disfruta de tus conversaciones mientras tu privacidad este segura";
+    transform: translateY(23%) scale(100%);
+    color: var(--light-gray);
+    font-size: 14px ;
+    text-wrap:balance;
+}
+.section-services .cards-services .services:nth-child(6):hover::after{
+    content:"Red global y apoyo donde y con quien te encuentres";
+    transform: translateY(23%) scale(100%);
+    color: var(--light-gray);
+    font-size: 14px ;
+    text-wrap:balance;
+}
+.section-services .cards-services .services:hover > .title-card{
+    content:"";
+    display: none;
+}
+.section-services .cards-services .item-services{
+    width: 70px;
+    padding: 30px 0;
+    transform: scale(100%, 100%);
+    transition: .5s;
+}
+.section-services .cards-services .services:hover > .item-services{
+    transform: scale(110%, 110%);
+}
+.section-services .cards-services .title-card{
+    font-size: 18px ;
+    font-weight: 600;
+    padding: 0px 50px;
+    font-family: var(--body-font);
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    color: var( --gray);
+    text-align: center;
+}

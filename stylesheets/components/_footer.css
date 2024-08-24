@@ -1,0 +1,147 @@
+.footer-container{
+    width:100%;
+    display: flex;
+    margin:auto;
+    background-color: var(--deep-gray);
+}
+.footer-container .footer{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: auto;
+    background-color: var(--deep-gray);
+}
+.footer-container .footer .column-1-footer,
+.footer-container .footer .column-2-footer,
+.footer-container .footer .column-3-footer{
+    width:auto;
+}
+.footer-container .footer .column-1-footer .logo{
+    width: 40%;
+    padding: 40px auto;
+    margin-bottom: 50px;
+    justify-content: center;
+    opacity: .6;
+}
+.footer-container .footer .column-1-footer .column-social-media{
+    color: var(--light-gray);
+    font-size: 12px ;
+    font-weight: 600;
+    font-family: var(--body-font);
+    border-left: 1px solid var(--light-blue);
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.footer-container .footer .column-1-footer .column-social-media p{
+    padding-bottom: 20px;
+}
+.footer-container .footer .column-1-footer .column-social-media .social-media{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items:center;
+    gap:0px;
+}
+.footer-container .footer .column-1-footer .column-social-media .social-media .bxl-facebook-circle,
+.footer-container .footer .column-1-footer .column-social-media .social-media .bxl-instagram-alt,
+.footer-container .footer .column-1-footer .column-social-media .social-media .bxl-youtube,
+.footer-container .footer .column-1-footer .column-social-media .social-media .bxl-twitter{
+    width: 25px;
+}
+.footer-container .footer .column-2-footer .connect-all-in-one{
+    border-left: 1px solid var(--light-blue);
+    padding-left: 20px;
+}
+.footer-container .footer .column-2-footer h4{
+    color: var(--light-blue);
+    font-size: 15px ;
+    font-weight: 600;
+    font-family: var(--body-font);
+    margin-bottom: 50px;
+}
+.footer-container .footer .column-2-footer .connect-all-in-one ul li{
+    list-style-type: none;
+
+    padding: 5px 0px;
+}
+.footer-container .footer .column-2-footer .connect-all-in-one ul li a.item{
+    color: var(--light-gray);
+    font-size: 12px ;
+    font-weight: 600;
+    font-family: var(--body-font);
+    text-decoration: none;
+    transition:0.3s ease-in-out;
+}
+.footer-container .footer .column-2-footer .connect-all-in-one ul li a.item:hover{
+    text-decoration: underline;
+    color:var(--blue);
+}
+.footer-container .footer .column-3-footer .about-all-in-one{
+    border-left: 1px solid var(--light-blue);
+    padding-left: 20px;
+}
+.footer-container .footer .column-3-footer h4{
+    color: var(--light-blue);
+    font-size: 15px ;
+    font-weight: 600;
+    font-family: var(--body-font);
+    margin-bottom: 50px;
+}
+.footer-container .footer .column-3-footer .about-all-in-one ul li{
+    list-style-type: none;
+    padding: 5px 0px;
+}
+.footer-container .footer .column-3-footer .about-all-in-one ul li a.item{
+    color: var(--light-gray);
+    font-size: 12px ;
+    font-weight: 600;
+    font-family: var(--body-font);
+    text-decoration: none;
+    transition:0.3s ease-in-out;
+}
+.footer-container .footer .column-3-footer .about-all-in-one ul li a.item:hover{
+    text-decoration: underline;
+    color:var(--blue);
+}
+.footer-container .made-by{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    margin: auto;
+    background-color: var(--deep-gray);
+    color: var(--light-black);
+    font-size: 10px ;
+    font-weight: 300;
+    font-family: var(--body-font);
+    position: relative;
+}
+.footer-container .made-by span{
+    font-size:15px;
+    color: var(--hotpink);
+    padding: 0px 5px;
+    animation:heart 1s linear infinite;
+}
+@keyframes heart{
+    0%{
+        transform:scale(100%);
+    }
+    25%{
+        transform:scale(90%);
+    }
+    50%{
+        transform:scale(90%);
+    }
+    75%{
+        transform:scale(100%);
+    }
+    100%{
+        transform:scale(90%);
+    }
+}
