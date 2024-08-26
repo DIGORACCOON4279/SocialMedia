@@ -1,149 +1,199 @@
-.main-container{
-    display:flex;
-    flex-direction: column;
-    margin: 50px auto;
-}
+
+/* Header */
+
 .header-dashboard{
     width:100%;
     height: auto;
     display:flex;
-    flex-direction: row;
-    justify-content: space-between;
+    margin:auto;
     background-color: var(--almost-black);
-    padding: 15px 30px;
+    padding: 15px 0px;
     border: 1px solid rgb(95, 94, 94);
     position: fixed;
     top: 0;
     z-index: 100;
 }
-.header-dashboard .left-side{
+.header-dashboard .center-dashboard{
+    width:100%;
+    max-width: 1200px;
+    height:auto;
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-between;
+    margin:auto;
 }
-.header-dashboard .left-side .vector-logo{
+
+/* Left Side */
+
+.header-dashboard .center-dashboard .left-side{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+}
+.header-dashboard .center-dashboard .left-side .vector-logo{
     width: 10%;
     height: auto;
 }
-.header-dashboard .left-side p{
+.header-dashboard .center-dashboard .left-side p{
     font-size: 20px;
     color: var(--blue);
     font-weight: 500;
     font-family: var(--body-font);
 }
-.header-dashboard .right-side {
+
+/* Right - Side */
+
+.header-dashboard .center-dashboard .right-side {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+/* Bell - Message */
+
+.header-dashboard .center-dashboard .right-side .message-right-side{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-.header-dashboard .right-side .vector-bell{
-    width:25px;
-    height:25px;
-    margin-right: 20px;
-
-    transform: scale(100%);
-    transition: transform .3s linear;
-    cursor: pointer;
-}
-.header-dashboard .right-side .vector-bell:hover{
-    transform: scale(115%) ;
-}
-.header-dashboard .right-side .pic-profile-man{
-    width:40px;
-    height:40px;
-    border-radius: 50%;
-    border: 1px solid var(--blue);
-    cursor: pointer;
-}
-.header-dashboard .right-side .nav-bar{
-    position: fixed;
-    top: -5px;
-    right: 0px;
-    width: 15%;
+.header-dashboard .center-dashboard .right-side .message-right-side .vector-bell{
+    width:20px;
     height: auto;
-    background-color: hsl(0, 11%, 15%);
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 80px;
-    border: 1px solid rgb(95, 94, 94);
-    z-index: 100;
-
-}
-.header-dashboard .right-side .scroll-bar{
-    position: fixed;
-    top: -5px;
-    right: 70px;
-    width: 25%;
-    height: 300px;
-    background-color: hsl(0, 11%, 15%);
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 80px;
-    border: 1px solid rgb(95, 94, 94);
-    z-index: 100;
-    overflow: scroll;
+    transform:scale(100%);
     cursor: pointer;
-    transition: all 0.2;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
 }
-.header-dashboard .right-side .scroll-bar:hover{
-    background-color: var(--deep-gray);
-
+.header-dashboard .center-dashboard .right-side .message-right-side .vector-bell:hover{
+    transform:scale(110%);
 }
-.header-dashboard .right-side .scroll-bar h3{
-    font-size: 10px;
+.header-dashboard .center-dashboard .right-side .message-right-side .scroll-bar{
+    display:none;
+    opacity: 0;
+    visibility: hidden;
+}
+.header-dashboard .center-dashboard .right-side .message-right-side .scroll-bar h3{
+    font-size: 12px;
     color: var(--gray);
     font-weight: 200;
     font-family: var(--body-font);
     text-decoration: none;
-    padding: 10px 15px;
-    transition: .3s;
+    transition: .3s ease-in-out;
     display: flex;
-
 }
-.header-dashboard .right-side .scroll-bar p{
-    font-size: 12px;
+.header-dashboard .center-dashboard .right-side .message-right-side .scroll-bar p{
+    font-size: 10px;
     color: var(--light-blue-opacity);
     font-weight: 200;
     font-family: var(--body-font);
     text-decoration: none;
-    padding: 10px 15px;
-    transition: .3s;
+    transition: .3s ease-in-out;
     display: flex;
+    padding-top: 10px;
+    line-height: 15px;
+    text-wrap: balance;
 }
-.header-dashboard .right-side .nav-bar .btn__option{
+.header-dashboard .center-dashboard .right-side .message-right-side .scroll__input{
+    display: none;
+}
+.header-dashboard .center-dashboard .right-side .message-right-side .scroll__input:checked + .scroll-bar{
+    width:300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    margin: auto;
+    padding: 10px 0px 20px;
+    opacity:1;
+    visibility: visible;
+    position:absolute;
+    top:42px;
+    right:0;
+    border:1px solid var(--blue);
+    background-color: #191918;
+    overflow-y: scroll;
+}
+.header-dashboard .center-dashboard .right-side .message-right-side .scroll-bar .msn{
+    width:90%;
+    background-color: #191918;
+    padding: 10px ;
+    cursor:pointer;
+    border-radius: 10px;
+    transition:0.3s ease-in;
+}
+.header-dashboard .center-dashboard .right-side .message-right-side .scroll-bar .msn:hover{
+    background-color: var(--deep-gray);
+}
+
+/* User -Navbar */
+
+.header-dashboard .center-dashboard .right-side .navbar-right-side{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-dashboard .center-dashboard .right-side .navbar-right-side .pic-profile-man{
+    width:24px;
+    height: auto;
+    cursor: pointer;
+}
+.header-dashboard .center-dashboard .right-side .navbar-right-side .nav-bar{
+    display:none;
+    opacity: 0;
+    visibility: hidden;
+}
+.header-dashboard .center-dashboard .right-side .navbar-right-side .nav-bar ul{
+    display: flex;
+    flex-direction: column;
+}
+.header-dashboard .center-dashboard .right-side .navbar-right-side .nav-bar ul li{
+    list-style-type: none;
+}
+.header-dashboard .center-dashboard .right-side .navbar-right-side .nav__input{
+    display: none;
+}
+.header-dashboard .center-dashboard .right-side .navbar-right-side .nav__input:checked + .nav-bar{
+    width:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity:1;
+    visibility: visible;
+    position:absolute;
+    top:44px;
+    right:0;
+    background-color: #191918;
+}
+.header-dashboard .center-dashboard .right-side .navbar-right-side .nav-bar .btn__option{
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    gap:20px;
     font-size: 13px;
     color: var(--blue);
     font-weight: 500;
     font-family: var(--body-font);
     text-decoration: none;
-    padding: 20px 15px;
-    transition: .3s;
-    display: flex;
+    padding: 10px 15px;
+    transition: .3s ease-in-out;
 }
-.header-dashboard .right-side .nav-bar .btn__option:hover{
+.header-dashboard .center-dashboard .right-side .navbar-right-side .nav-bar .btn__option:hover{
     background-color:var(--light-blue-opacity) ;
     color: var(--white);
 }
-.header-dashboard .right-side .nav-bar i{
+.header-dashboard .center-dashboard .right-side .navbar-right-side .nav-bar i{
     font-size: 20px;
-    margin-right: 20px;
-}
-.header-dashboard .right-side .scroll__input{
-    display: none;
-}
-.header-dashboard .right-side .scroll__input:checked + .scroll-bar{
-    display: flex;
-}
-.header-dashboard .right-side .nav__input{
-    display: none;
-}
-.header-dashboard .right-side .nav__input:checked + .nav-bar{
-    display: flex;
 }
 
 
@@ -156,9 +206,14 @@
 
 
 
+/*----------- Main - Container -------------*/
 
-/*----------- Visto hasta aca -------------*/
 
+.main-container{
+    display:flex;
+    flex-direction: column;
+    margin: 50px auto;
+}
 .main-container .container-section{
     margin-top: 20px;
 }
@@ -184,7 +239,7 @@
     position:absolute;
     top: 0px;
     right: 200px;
-    transition:  all .3s;
+    transition: .3s ease-in-out ;
     z-index: 100;
     opacity: 1;
 }
@@ -195,7 +250,7 @@
     position:absolute;
     top: 5px;
     left: 170px;
-    transition: .3s;
+    transition: .3s ease-in-out;
     opacity: 1;
 }
 .main-container .container-section .navbar-profile .navbar-side-left .icon-equis i:hover{
@@ -224,7 +279,7 @@
     padding: 15px 20px;
     background-color:  var(--almost-black);
     border: 1px solid transparent;
-    transition: .3s;
+    transition: .3s ease-in-out;
     z-index: 100;
     justify-content: center;
 }
@@ -238,7 +293,7 @@
 	height: auto;
 	top: -5px;
     left: 0px;
-	transition: all 500ms ease;
+	transition: 500ms ease-in-out;
 	opacity: 0;
     visibility: hidden;
     margin-right: 40px;
@@ -253,7 +308,7 @@
 
 .main-container .container-section .navbar-profile .navbar-side-left .container-side-left .menu-list{
     transform: translateX(-100%);
-    transition: transform .3s;
+    transition: transform .3s ease-in-out;
     margin: 18px 0px 0px 60px;
     display:flex;
     flex-direction: column;
@@ -269,7 +324,7 @@
 	background: #1c1c1c;
 	height: 100vh;
 	position: relative;
-	transition: all 500ms ease;
+	transition: 500ms ease-in-out  ;
 	position: fixed;
 	transform: translateX(-100%);
 }*/
@@ -337,7 +392,7 @@
     padding: 13px 20px 21px 40px;
     background-color: var(--deep-gray);
     border: 1px solid transparent;
-    transition: .2s;
+    transition: .2s ease-in-out;
 }
 .main-container .container-section .navbar-profile .navbar-side-left .container-side-left .navbar .links:hover{
     border: 1px solid var(--deep-gray);
@@ -400,7 +455,7 @@
     background-color: var(--deep-gray);
     margin-left: 10px;
     border: 1px solid var(--blue);
-    transition: .5s;
+    transition: .5s ease-in-out;
 }
 .main-container .container-section .navbar-profile .navbar-side-right .search-content .search-btn:hover{
     border: 1px solid var(--deep-gray);
@@ -421,7 +476,7 @@
     font-size: 16px;
     font-weight: 500;
     font-family: var(--body-font);
-    transition:.3s;
+    transition:.3s ease-in-out;
 }
 .main-container .container-section .navbar-profile .navbar-side-right .navbar-categories .category:hover{
     border: 1px solid var(--deep-gray);
@@ -449,7 +504,7 @@
     font-size: 16px;
     font-weight: 500;
     font-family: var(--body-font);
-    transition: .3s;
+    transition: .3s ease-in-out;
 }
 .main-container .container-section .navbar-profile .navbar-side-right .navbar-teams .team:hover{
     border: 1px solid var(--deep-gray);

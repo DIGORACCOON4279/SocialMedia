@@ -45,6 +45,7 @@
 .section-plan .cards .card-personal .services,
 .section-plan .cards .card-premium .services{
     width:25px;
+    border-radius: 100%;
 }
 
 .section-plan .cards .card-premium .services-img,
