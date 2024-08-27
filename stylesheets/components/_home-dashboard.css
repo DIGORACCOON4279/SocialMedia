@@ -387,7 +387,7 @@
     font-family: var(--body-font);
 }
 .main-container-dashboard .section-body .navbar-side-right .search-form .search-btn{
-    padding: 10px 15px;
+    padding: 10px 20px;
     color: var(--blue);
     text-align: center;
     font-size: 12px;
