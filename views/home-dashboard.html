@@ -130,34 +130,36 @@
         </div>
     </header>
 
-    <main class="main-container">
+<!-- Main-Container--Dashboard -->
 
-        <!-- <div class="ball-pink"></div> -->
 
-        <section class="container-section">
-            <div class="navbar-profile">
-                <div class="navbar-side-left">
+    <main class="main-container-dashboard">
+
+        <section class="section-menu">
+
+                <section class="navbar-side-left">
                     <input type="checkbox" id="btn-menu">
 
-                    <div class="icons">
+                    <section class="icons">
                         <label for="btn-menu" class="icon-menu">
                             <i class='bx bx-menu'></i>
                         </label>
+                        <div class="icons-menu">
+                            <i class='bx bx-user-circle'></i>
+                            <i class='bx bx-chat'></i>
+                            <i class='bx bx-conversation'></i>
+                            <i class='bx bx-network-chart'></i>
+                            <i class='bx bx-cog'></i>
+                            <i class='bx bx-support'></i>
+                        </div>
+                    </section>
 
-                        <i class='bx bx-user-circle'></i>
-                        <i class='bx bx-chat'></i>
-                        <i class='bx bx-conversation'></i>
-                        <i class='bx bx-network-chart'></i>
-                        <i class='bx bx-cog'></i>
-                        <i class='bx bx-support'></i>
-                    </div>
-
-                    <div class="container-side-left">
+                    <section class="container-side-left">
+                        <label for="btn-menu" class="icon-equis">
+                            <i class='bx bx-arrow-from-right'></i>
+                        </label>
 
                         <div class="menu-list">
-                            <label for="btn-menu" class="icon-equis">
-                                <i class='bx bx-arrow-from-right'></i>
-                            </label>
 
                             <div class="data-profile">
                                 <img src="/images/pic-profile-man.webp" alt="" class="pic-profile-man">
@@ -176,10 +178,15 @@
                             </nav>
 
                         </div>
-                    </div>
-                </div>
+                    </section>
+                </section>
 
-                <div class="navbar-side-right">
+        </section>
+
+    <!-- Section Body -->
+
+        <section class="section-body">
+                <section class="navbar-side-right">
                     <nav class="navbar-categories">
                         <a href="#" class="category">Categorias</a>
                         <a href="#" class="category">Nuevas categorias</a>
@@ -193,10 +200,11 @@
                         <a href="#" class="team">Equipos</a>
                         <a href="#" class="team">Nuevos equipos</a>
                     </nav>
-                </div>
+                </section>
             </div>
         </section>
 
     </main>
+
 </body>
 </html>
