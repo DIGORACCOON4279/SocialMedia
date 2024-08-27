@@ -173,7 +173,7 @@
     position:absolute;
     top:44px;
     right:0;
-    background-color: #191918;
+    background-color: var(--dark);
     box-shadow:-4px 4px  8px 1px var(--black);
 }
 .header-dashboard .center-dashboard .right-side .navbar-right-side .nav-bar .btn__option{
@@ -191,7 +191,7 @@
     transition: .3s ease-in-out;
 }
 .header-dashboard .center-dashboard .right-side .navbar-right-side .nav-bar .btn__option:hover{
-    background-color:var(--light-blue-opacity) ;
+    background-color:var(--deep-gray) ;
     color: var(--white);
 }
 .header-dashboard .center-dashboard .right-side .navbar-right-side .nav-bar i{
@@ -217,88 +217,43 @@
 /*---- Side left------*/
 
 .main-container-dashboard .section-menu .navbar-side-left{
-    width: 20vw;
+    width: 45px;
     height: 100%;
     position: fixed;
     top:59.83px;
     left:0;
     z-index:9;
-    /* overflow: hidden; */
+    box-shadow: 0px 0px 50px 1px var(--black);
 }
-.main-container-dashboard .section-menu .navbar-side-left .icons{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-evenly; */
-    align-items: center;
-    background-color: var(--almost-black);
-    width: 3vw;
-    height: 100%;
-    padding: 10px 0px;
-    z-index: 1;
-    /* background-color: aqua; */
-
-}
-.main-container-dashboard .section-menu .navbar-side-left .icons .icon-menu i.bx-menu{
-	color: var(--white);
-	font-size: 24px;
-	cursor: pointer;
-    /* z-index: 100; */
-    /* opacity: 1; */
+.main-container-dashboard .section-menu .navbar-side-left .icon-menu i.bx-menu{
+    font-size: 24px;
     cursor: pointer;
-
-    transition: .3s ease-in-out ;
+    color:var(--white);
+    margin:10px;
+    transition: color 0.3s ease-in-out;
 }
-.main-container-dashboard .section-menu .navbar-side-left .icons .icon-menu i:hover{
-    color: var(--light-blue);
-}
-
-
-.main-container-dashboard .section-menu .navbar-side-left .icons .icons-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap:20px;
-    width:100%;
-    height: 80%;
-
-}
-.main-container-dashboard .section-menu .navbar-side-left .icons .icons-menu i{
-
-    width: auto;
-    height: auto;
-    font-size: 20px;
-    color: var(--blue);
-    font-weight: 500;
-    /* padding: 15px 0px; */
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: .3s ease-in-out;
-    /* z-index: 100; */
-    justify-content: center;
+.main-container-dashboard .section-menu .navbar-side-left .icon-menu i.bx-menu:hover{
+    color:var( --blue)
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left{
 	position: absolute;
-    top: -5px;
-    left:15%;
-    background-color:  var(--almost-black);
+    top: 0;
+    left:0px;
+    background-color:  var(--dark);
 	width: 20vw;
 	height: 100vh;
 	opacity: 0;
-    z-index: -1;
-    padding: 15px;
+    z-index: 1;
+    padding:15px;
+    box-shadow: 0px 0px 50px 1px var(--black);
+    display: flex;
+    flex-direction: column;
     transform:translateX(-100%);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .icon-equis {
-    /* align-items: flex-end; */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
+    align-self: flex-end;
 }
-
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .icon-equis i.bx-arrow-from-right{
 	color: var(--white);
 	font-size: 24px;
@@ -307,17 +262,12 @@
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .icon-equis i:hover{
     color: var(--light-blue);
-
 }
 .main-container-dashboard .section-menu .navbar-side-left #btn-menu{
     display: none;
 }
-
-
 .main-container-dashboard .section-menu .navbar-side-left #btn-menu:checked ~ .container-side-left{
 	opacity: 1;
-
-    border-right: 1px solid #5f5e5e;
     transform: translateX(0%);
 }
 
@@ -326,13 +276,10 @@
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list{
     width:auto;
     height: 80%;
-     /* margin: 18px 0px 0px 60px; */
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    margin:auto;
-     /* z-index: -1; */
+    align-items: flex-end;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list progress{
     width:100%;
@@ -346,10 +293,9 @@
     margin: 25px auto;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .data-profile .pic-profile-man{
-    width: 60px;
+    width: 45px;
     height: auto;
     margin: 20px auto;
-    border: 1px solid var(--blue) ;
     border-radius: 50%;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .data-profile p{
@@ -366,13 +312,13 @@
     justify-content: center;
     align-items: center;
     box-shadow: none;
-    background-color: var(--almost-black);
+    background-color: var(--dark);
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .navbar1 ul{
     width:100%;
     display: flex;
     flex-direction: column;
-    /* gap:2.5px; */
+    justify-content: flex-end;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .navbar1 ul li{
     list-style-type: none;
@@ -388,17 +334,20 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    gap: 30px;
     text-decoration: none;
-    padding: 10px;
-    border: 1px solid transparent;
+    padding: 13px;
+    border-radius: 5px;
     transition: .2s ease-in-out;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .navbar1 .links:hover{
-    border: 1px solid var(--deep-gray);
-    background-color: var(--light-blue-opacity);
-    box-shadow: 0 0 3px var(--white);
+    background-color: var(--deep-gray);
     color: var(--gray);
 }
+.main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .navbar1 .links i.bx{
+    font-size:20px;
+}
+
 
 
 
