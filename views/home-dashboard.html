@@ -175,22 +175,42 @@
     <!-- Section Body -->
 
         <section class="section-body">
-                <section class="navbar-side-right">
-                    <nav class="navbar-categories">
-                        <a href="#" class="category">Categorias</a>
-                        <a href="#" class="category">Nuevas categorias</a>
-                        <label for="" class="search-content">
+            <section class="navbar-side-right">
+                <form action="" class="search-form">
+                    <label for="" class="search-content">
+                        <input type="text" placeholder="" class="search">
+                    </label>
+                    <input type="submit" value="Buscar" class="search-btn">
+                </form>
 
-                            <input type="text" placeholder="" class="search">
-                            <input type="submit" value="Buscar" class="search-btn">
-                        </label>
-                    </nav>
-                    <nav class="navbar-teams">
-                        <a href="#" class="team">Equipos</a>
-                        <a href="#" class="team">Nuevos equipos</a>
-                    </nav>
-                </section>
-            </div>
+
+                <input type="checkbox" id="grid">
+                    <label for="grid" class="grid-icon">
+                        <i class='bx bxs-grid'></i>
+                    </label>
+                <nav class="navbar-body">
+                    <label for="grid" class="grid-icon">
+                        <i class='bx bxs-close'></i>
+                    </label>
+
+                    <ul class="navbar-categories">
+                        <li>
+                            <a href="#" class="category">Categorias</a>
+                        </li>
+                        <li>
+                            <a href="#" class="category">Crear categorias</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-teams">
+                        <li>
+                            <a href="#" class="team">Equipos</a>
+                        </li>
+                        <li>
+                            <a href="#" class="team">Crear equipos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
         </section>
 
     </main>

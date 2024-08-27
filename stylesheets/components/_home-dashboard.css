@@ -15,12 +15,11 @@
 }
 .header-dashboard .center-dashboard{
     width:100%;
-    max-width: 1200px;
     height:auto;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    margin:auto;
+    margin:auto 50px;
 }
 
 /* Left Side */
@@ -203,11 +202,11 @@
 .main-container-dashboard{
     width:100%;
     display:flex;
-    /* flex-direction: column; */
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0px auto;
+    /* gap:100px; */
 }
 
 /*---- Side left------*/
@@ -266,9 +265,6 @@
 	opacity: 1;
     transform: translateX(0%);
 }
-
-/*-------Verificar estos dos ultimos----*/
-
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list{
     width:auto;
     height: 80%;
@@ -344,117 +340,158 @@
     font-size:20px;
 }
 
+
+
+
+
+
+
+
+
+
 /*------- Boby Search ----*/
 
+.main-container-dashboard .section-body {
+    width: 78vw;
+    height:auto;
+    padding: 80px 20px 0px 0px;
+}
 .main-container-dashboard .section-body .navbar-side-right{
-    width: 75%;
+    width: auto;
     height:auto;
     display:flex;
-    flex-direction: column;
-    background-color:  var(--almost-black);
-    padding: 40px 40px;
-    border-radius: 4px;
-    margin-top: 40px;
-    margin-left: 320px;
-}
-
-.main-container-dashboard .section-body .navbar-side-right .navbar-categories{
-    display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    background-color: var(--deep-gray);
+    background-color:  var(--almost-black);
+    padding: 15px ;
     border-radius: 4px;
-    color: var(--blue);
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: var(--body-font);
+    position: relative;
 }
-.main-container-dashboard .section-body .navbar-side-right .search-content{
+.main-container-dashboard .section-body .navbar-side-right .search-form{
     display:flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.main-container-dashboard .section-body .navbar-side-right .search-form .search-content .search{
+    background-color: var(--deep-gray);
+    color: var(--white);
     border-radius: 4px;
-    color: var(--blue);
-    text-align: center;
-    font-size: 14px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 12px;
     font-weight: 500;
     font-family: var(--body-font);
 }
-.main-container-dashboard .section-body .navbar-side-right .search-content .search{
-    background-color: var(--deep-gray);
-    color: var(--blue);
-    border-radius: 4px;
-}
-.main-container-dashboard .section-body .navbar-side-right .search-content .search-btn{
+.main-container-dashboard .section-body .navbar-side-right .search-form .search-btn{
     padding: 10px 15px;
     color: var(--blue);
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     font-family: var(--body-font);
     border-radius: 4px;
     cursor: pointer;
     background-color: var(--deep-gray);
-    margin-left: 10px;
     border: 1px solid var(--blue);
     transition: .5s ease-in-out;
 }
-.main-container-dashboard .section-body .navbar-side-right .search-content .search-btn:hover{
+.main-container-dashboard .section-body .navbar-side-right .search-btn:hover{
     border: 1px solid var(--deep-gray);
     background-color: var(--light-blue-opacity);
     box-shadow: 0 0 3px var(--white);
     color: var(--gray);
 }
-.main-container-dashboard .section-body .navbar-side-right .navbar-categories .category{
-    width: 200px;
-    background-color: var(--deep-gray);
-    border: 1px solid var(--blue);
-    border-radius: 4px;
-    margin: 20px 0;
-    padding: 10px 5px;
-    color: var(--blue);
-    text-decoration: none;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: var(--body-font);
-    transition:.3s ease-in-out;
+
+
+
+/* Aqui voy */
+
+
+.main-container-dashboard .section-body .navbar-side-right .navbar-body{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
+
 
 /* Body - Nuevos equipos -*/
 
-.main-container-dashboard .section-body .navbar-side-right .navbar-categories .category:hover{
-    border: 1px solid var(--deep-gray);
-    background-color: var(--light-blue-opacity);
-    box-shadow: 0 0 3px var(--white);
-    color: var(--gray);
+.main-container-dashboard .section-body .navbar-side-right #grid{
+    display: none;
 }
-.main-container-dashboard .section-body .navbar-side-right .navbar-teams{
+.main-container-dashboard .section-body .navbar-side-right #grid:checked ~ .navbar-body{
+    width:auto;
+    height: auto;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: var(--deep-gray);
     border-radius: 4px;
-    justify-content: space-evenly;
-    margin: 30px 0;
+    position: absolute;
+    top:75%;
+    right:25px;
+    gap:10px;
+    opacity: 1;
+    visibility: visible;
 }
-.main-container-dashboard .section-body .navbar-side-right .navbar-teams .team{
-    width: 170px;
+.main-container-dashboard .section-body .navbar-side-right .grid-icon i.bxs-grid{
+    font-size: 24px;
+    cursor: pointer;
+    color:var(--white);
+    margin:10px;
+    transition: color 0.3s ease-in-out;
+}
+.main-container-dashboard .section-body .navbar-side-right .grid-icon i.bxs-grid:hover{
+    color:var( --blue)
+}
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-teams,
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-categories{
+    width:auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--deep-gray);
+    border-radius: 4px;
+    gap:10px;
+}
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-teams li,
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-categories li{
+    width:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--deep-gray);
+    border-radius: 4px;
+    gap:10px;
+    margin:20px;
+    list-style-type: none;
+}
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-teams .team,
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-categories .category{
+    width:100%;
     padding: 10px 15px;
     color: var(--blue);
     border: 1px solid var(--blue);
-    margin: 20px 0;
     border-radius: 4px;
     text-decoration: none;
     text-align: center;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 500;
     font-family: var(--body-font);
     transition: .3s ease-in-out;
 }
-.main-container-dashboard .section-body .navbar-side-right .navbar-teams .team:hover{
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-teams .team:hover,
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-categories .category:hover{
     border: 1px solid var(--deep-gray);
     background-color: var(--light-blue-opacity);
     box-shadow: 0 0 3px var(--white);
     color: var(--gray);
 }
+
+
