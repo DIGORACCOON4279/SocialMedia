@@ -66,6 +66,7 @@
     transform:scale(100%);
     cursor: pointer;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease-in-out;
@@ -141,7 +142,7 @@
     justify-content: center;
     align-items: center;
 }
-.header-dashboard .center-dashboard .right-side .navbar-right-side .pic-profile-man{
+.header-dashboard .center-dashboard .right-side .navbar-right-side img.pic-profile-man{
     width:24px;
     height: auto;
     cursor: pointer;
@@ -181,7 +182,7 @@
     flex-direction: row;
     align-items: center ;
     gap:20px;
-    font-size: 12px;
+    font-size: 10px;
     color: var(--blue);
     font-weight: 500;
     font-family: var(--body-font);
@@ -194,7 +195,7 @@
     color: var(--white);
 }
 .header-dashboard .center-dashboard .right-side .navbar-right-side .nav-bar i{
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /*----------- Main - Container -------------*/
@@ -318,7 +319,7 @@
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .navbar1 .links{
     width: 100%;
     height:auto;
-    font-size: 13px;
+    font-size: 11px;
     color: var(--blue);
     font-weight: 500;
     font-family: var(--body-font);
@@ -337,7 +338,7 @@
     color: var(--gray);
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .navbar1 .links i.bx{
-    font-size:20px;
+    font-size:18px;
 }
 
 
@@ -445,7 +446,26 @@
     cursor: pointer;
     color:var(--white);
     margin:10px;
+    display: flex;
+    flex-direction: column;
+    position:relative;
     transition: color 0.3s ease-in-out;
+}
+.main-container-dashboard .section-body .navbar-side-right .grid-icon i.bxs-grid::after{
+    content:"";
+    position: absolute;
+    top:40px;
+    right:0;
+}
+.main-container-dashboard .section-body .navbar-side-right .grid-icon i.bxs-grid:hover::after{
+    content:"Menu";
+    font-size: 10px;
+    cursor: pointer;
+    color:var(--white);
+    font-family: var(--body-font);
+    background-color: var(--black);
+    padding:5px 10px;
+    border-radius: 4px;
 }
 .main-container-dashboard .section-body .navbar-side-right .grid-icon i.bxs-grid:hover{
     color:var( --blue)
@@ -471,7 +491,6 @@
     justify-content: center;
     align-items: center;
     gap:10px;
-    /* background-color: var(--deep-gray); */
     border-radius: 4px;
     list-style-type: none;
 }
