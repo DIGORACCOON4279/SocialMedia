@@ -35,7 +35,7 @@
     height: auto;
 }
 .header-dashboard .center-dashboard .left-side p{
-    font-size: 14px;
+    font-size: 12px;
     color: var(--blue);
     font-weight: 500;
     font-family: var(--body-font);
@@ -292,7 +292,7 @@
     border-radius: 50%;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .data-profile p{
-    font-size: 15px;
+    font-size: 13px;
     color: var(--hotpink);
     margin-bottom: 30px;
     font-weight: 500;
