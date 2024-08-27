@@ -84,8 +84,8 @@
     font-weight: 200;
     font-family: var(--body-font);
     text-decoration: none;
-    transition: .3s ease-in-out;
     display: flex;
+    transition: .3s ease-in-out;
 }
 .header-dashboard .center-dashboard .right-side .message-right-side .scroll-bar p{
     font-size: 10px;
@@ -116,7 +116,7 @@
     position:absolute;
     top:42px;
     right:0;
-    box-shadow:-4px 4px  8px 1px var(--black);
+    box-shadow:-4px 4px 8px 1px var(--black);
     background-color: #191918;
     overflow-y: scroll;
 }
@@ -417,7 +417,6 @@
     visibility: hidden;
 }
 
-
 /* Body - Nuevos equipos -*/
 
 .main-container-dashboard .section-body .navbar-side-right #grid{
@@ -430,12 +429,14 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--deep-gray);
+    gap:10px;
+    padding: 15px;
+    background-color: var(--dark);
     border-radius: 4px;
     position: absolute;
     top:75%;
     right:25px;
-    gap:10px;
+    box-shadow:-4px 4px 8px 1px var(--black);
     opacity: 1;
     visibility: visible;
 }
@@ -455,9 +456,12 @@
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: var(--deep-gray);
-    border-radius: 4px;
     gap:10px;
+    background-color: var(--dark);
+    border-radius: 4px;
+}
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-categories{
+    margin-top: -25px;
 }
 .main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-teams li,
 .main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-categories li{
@@ -466,31 +470,38 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--deep-gray);
-    border-radius: 4px;
     gap:10px;
-    margin:20px;
+    /* background-color: var(--deep-gray); */
+    border-radius: 4px;
     list-style-type: none;
+}
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-teams li span.icon,
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-categories li span.icon{
+    width:100%;
+    font-size:17px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
 }
 .main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-teams .team,
 .main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-categories .category{
-    width:100%;
-    padding: 10px 15px;
+    width:100px;
     color: var(--blue);
-    border: 1px solid var(--blue);
-    border-radius: 4px;
+    border: 1px solid transparent;
     text-decoration: none;
     text-align: center;
     font-size: 10px;
     font-weight: 500;
     font-family: var(--body-font);
+    color: var(--light-blue-opacity);
+    font-weight: 200;
+    padding: 5px;
     transition: .3s ease-in-out;
 }
 .main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-teams .team:hover,
-.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-categories .category:hover{
-    border: 1px solid var(--deep-gray);
+.main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-categories .category:hover {
     background-color: var(--light-blue-opacity);
-    box-shadow: 0 0 3px var(--white);
+    background-color: var(--deep-gray);
     color: var(--gray);
 }
 
