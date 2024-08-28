@@ -275,7 +275,7 @@
     align-items: flex-end;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .data-profile{
-    width:55%;
+    width:65%;
     height:auto;
     display:flex;
     flex-direction: column;
@@ -418,10 +418,7 @@
     background-color: var(--light-blue-opacity);
 }
 
-
-
-/* Aqui voy */
-
+/* Navbar Body */
 
 .main-container-dashboard .section-body .navbar-side-right .navbar-body{
     display: none;
