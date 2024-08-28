@@ -398,13 +398,11 @@
     border-radius: 4px;
     cursor: pointer;
     background-color: var(--deep-gray);
-    border: 1px solid var(--blue);
+    border: 1px solid var(--deep-gray);
     transition: .5s ease-in-out;
 }
 .main-container-dashboard .section-body .navbar-side-right .search-btn:hover{
     border: 1px solid var(--deep-gray);
-    background-color: var(--light-blue-opacity);
-    box-shadow: 0 0 3px var(--white);
     color: var(--gray);
 }
 
