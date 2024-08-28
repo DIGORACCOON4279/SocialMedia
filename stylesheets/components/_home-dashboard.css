@@ -364,7 +364,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color:  var(--almost-black);
+    background-color:  var(--dark);
+    box-shadow:0px 0px 8px 1px var(--black);
     padding: 15px ;
     border-radius: 4px;
     position: relative;
@@ -377,7 +378,7 @@
     gap:20px;
 }
 .main-container-dashboard .section-body .navbar-side-right .search-form .search-content .search{
-    background-color: var(--deep-gray);
+    background-color: var(--dark);
     color: var(--white);
     border-radius: 4px;
     padding: 10px;
