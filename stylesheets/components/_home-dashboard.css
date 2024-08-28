@@ -275,7 +275,7 @@
     align-items: flex-end;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list progress{
-    width:100%;
+    width:100px;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .data-profile{
     height:auto;
@@ -283,19 +283,24 @@
     flex-direction: column;
     align-items: center;
     border-radius: 4px;
-    margin: 25px auto;
+    margin: 15px auto;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .data-profile .pic-profile-man{
     width: 45px;
     height: auto;
-    margin: 20px auto;
+    margin: 10px auto 20px;
     border-radius: 50%;
 }
-.main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .data-profile p{
+.main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .data-profile p.nombre{
     font-size: 13px;
     color: var(--hotpink);
-    margin-bottom: 30px;
     font-weight: 500;
+    margin-bottom:10px;
+    font-family: var(--body-font);
+}
+.main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .data-profile p.email{
+    font-size: 10px;
+    color: var(--light-black);
     font-family: var(--body-font);
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .navbar1{
