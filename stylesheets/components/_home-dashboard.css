@@ -412,12 +412,12 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--background-search-bar);
-    box-shadow:0px 0px 8px 1px var(--black);
+    box-shadow:-4px 4px 25px 1px var(--black);
     padding: 15px ;
     border-radius: 4px;
     /* position: relative; Funciona y servia antes de usar position:sticky*/
     position: sticky;
-    top: 80px;
+    top: 60px;
     right:0;
     z-index:9;
 }
