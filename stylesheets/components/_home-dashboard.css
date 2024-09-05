@@ -313,7 +313,7 @@
     margin: 15px auto;
     padding:20px 20px;
     border-radius: 5px;
-    background-color: #242424;
+    background-color: var(--background-search-bar);
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list .data-profile .pic-profile-man{
     width: 45px;
@@ -399,9 +399,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: visible;
     padding: 20px;
     gap:30px;
+    position: relative;
 }
 .main-container-dashboard .section-body .navbar-side-right{
     width: 100%;
@@ -410,12 +411,15 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color:  var(--dark);
+    background-color: var(--background-search-bar);
     box-shadow:0px 0px 8px 1px var(--black);
     padding: 15px ;
     border-radius: 4px;
-    position: relative;
-    z-index:1;
+    /* position: relative; Funciona y servia antes de usar position:sticky*/
+    position: sticky;
+    top: 80px;
+    right:0;
+    z-index:9;
 }
 .main-container-dashboard .section-body .navbar-side-right .search-form{
     display:flex;
@@ -477,7 +481,7 @@
     align-items: center;
     gap:10px;
     padding: 15px;
-    background-color: var(--dark);
+    background-color: var(--background-black);
     border-radius: 4px;
     position: absolute;
     top:75%;
@@ -522,7 +526,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     gap:10px;
-    background-color: var(--dark);
+    background-color: var(--background-black);
     border-radius: 4px;
 }
 .main-container-dashboard .section-body .navbar-side-right .navbar-body .navbar-categories{
@@ -585,13 +589,12 @@
     flex-wrap: wrap;
     justify-content:space-between;
     align-items: center;
-    gap:49px;
+    gap:41px;
 }
 .main-container-dashboard .section-body .blocks .block{
-    width: 30%;
-    height: 300px;
+    width: 22%;
+    height: 220px;
     padding: 30px;
-
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -600,7 +603,7 @@
     font-weight: 500;
     font-family: var(--body-font);
     color: var( --light-black);
-    background-color: #161616;
+    background-color:var( --background-cards);
     border:2px solid var(--black);
     /* box-shadow: -4px 4px 8px 1px var(--black); */
     box-shadow:0px 0px 24px 4px var(--black);
