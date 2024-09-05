@@ -198,54 +198,76 @@
     font-size: 16px;
 }
 
+
+
+
+
+
 /*----------- Main - Container -------------*/
 
 .main-container-dashboard{
-    width:100%;
-    display:flex;
+    width:auto;
+    height: auto;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 0px auto;
-    /* gap:100px; */
+    gap:0px;
+    margin: 0px 0px 0px;
 }
+
+
+
+
+
+
 
 /*---- Side left------*/
 
-.main-container-dashboard .section-menu .navbar-side-left{
-    width: 45px;
-    height: 100%;
-    position: fixed;
-    top:59.83px;
+.main-container-dashboard .section-menu{
+    width: auto;
+    height: 100vh;
+    position: sticky;
+    top:0px;
     left:0;
+}
+.main-container-dashboard .section-menu .navbar-side-left{
+    width: auto;
+    height: auto;
     z-index:9;
-    /* box-shadow: 0px 0px 50px 1px var(--black); */
+    box-shadow: 0px 0px 50px 1px var(--black);
 }
 .main-container-dashboard .section-menu .navbar-side-left .icon-menu i.bx-menu{
     font-size: 24px;
     cursor: pointer;
     color:var(--white);
     margin:10px;
-    transition: color 0.3s ease-in-out;
+    position: relative;
+    top:58.29px;
+    left:0;
+    z-index:9;
+    opacity:1;
+    visibility:visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 .main-container-dashboard .section-menu .navbar-side-left .icon-menu i.bx-menu:hover{
     color:var( --blue)
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left{
-	position: absolute;
-    top: 0;
+	position:relative;
+    top:0px;
     left:0px;
     background-color:  var(--dark);
-	width: 20vw;
+	width: 0vw;
 	height: 100vh;
 	opacity: 0;
-    z-index: 1;
     padding:15px;
     box-shadow: 0px 0px 50px 1px var(--black);
     display: flex;
     flex-direction: column;
-    transform:translateX(-100%);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    visibility: hidden;
+    transform:translateX(-400%);
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out, width 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .icon-equis {
     align-self: flex-end;
@@ -254,6 +276,7 @@
 	color: var(--white);
 	font-size: 24px;
 	cursor: pointer;
+    margin:10px;
     transition: .3s ease-in-out;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .icon-equis i:hover{
@@ -264,7 +287,13 @@
 }
 .main-container-dashboard .section-menu .navbar-side-left #btn-menu:checked ~ .container-side-left{
 	opacity: 1;
+    visibility: visible;
     transform: translateX(0%);
+    width:20vw;
+}
+.main-container-dashboard .section-menu .navbar-side-left #btn-menu:checked ~ .icon-menu i.bx-menu{
+	opacity: 0;
+    visibility:hidden;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .menu-list{
     width:auto;
@@ -360,15 +389,22 @@
 
 
 
-/*------- Boby Search ----*/
+/*------- Body Search ----*/
 
 .main-container-dashboard .section-body {
-    width: 78vw;
+    width: 100%;
     height:auto;
-    padding: 80px 20px 0px 0px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+    gap:30px;
 }
 .main-container-dashboard .section-body .navbar-side-right{
-    width: auto;
+    width: 100%;
     height:auto;
     display:flex;
     flex-direction: row;
@@ -379,6 +415,7 @@
     padding: 15px ;
     border-radius: 4px;
     position: relative;
+    z-index:1;
 }
 .main-container-dashboard .section-body .navbar-side-right .search-form{
     display:flex;
@@ -531,3 +568,120 @@
     background-color: var(--deep-gray);
     color: var(--gray);
 }
+
+
+
+
+/* Section Blocks */
+
+
+
+
+.main-container-dashboard .section-body .blocks{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    gap:49px;
+}
+.main-container-dashboard .section-body .blocks .block{
+    width: 30%;
+    height: 300px;
+    padding: 30px;
+
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--body-font);
+    color: var( --light-black);
+    background-color: #161616;
+    border:2px solid var(--black);
+    /* box-shadow: -4px 4px 8px 1px var(--black); */
+    box-shadow:0px 0px 24px 4px var(--black);
+    transition: 0.3s ease-in-out;
+}
+.main-container-dashboard .section-body .blocks .block:hover{
+    border:2px solid var(--light-red-opacity);
+    background-color: #1b1b1b;
+    color: var(--light-red-opacity);
+    box-shadow:inset -4px 4px 8px 1px var(--black);
+}
+/* .main-container-dashboard .section-body .blocks .block1{
+    background-color: rgb(75, 253, 194);
+}
+.main-container-dashboard .section-body .blocks .block2{
+    background-color: rgb(255, 56, 89);
+}
+.main-container-dashboard .section-body .blocks .block3{
+    background-color: rgb(127, 145, 255);
+}
+.main-container-dashboard .section-body .blocks .block4{
+    background-color: rgb(29, 229, 255);
+}
+.main-container-dashboard .section-body .blocks .block5{
+    background-color: rgb(255, 246, 127);
+}
+.main-container-dashboard .section-body .blocks .block6{
+    background-color: rgb(255, 127, 249);
+}
+.main-container-dashboard .section-body .blocks .block7{
+    background-color: rgb(127, 225, 255);
+}
+.main-container-dashboard .section-body .blocks .block8{
+    background-color: rgb(255, 127, 127);
+}
+.main-container-dashboard .section-body .blocks .block9{
+    background-color: rgb(127, 204, 255);
+}
+.main-container-dashboard .section-body .blocks .block10{
+    background-color: rgb(255, 232, 127);
+}
+.main-container-dashboard .section-body .blocks .block11{
+    background-color: rgb(185, 255, 127);
+}
+.main-container-dashboard .section-body .blocks .block12{
+    background-color: rgb(189, 255, 127);
+}
+.main-container-dashboard .section-body .blocks .block13{
+    background-color: rgb(129, 127, 255);
+}
+.main-container-dashboard .section-body .blocks .block14{
+    background-color: rgb(255, 246, 127);
+}
+.main-container-dashboard .section-body .blocks .block15{
+    background-color: rgb(255, 127, 234);
+}
+.main-container-dashboard .section-body .blocks .block16{
+    background-color: rgb(255, 189, 127);
+}
+.main-container-dashboard .section-body .blocks .block17{
+    background-color: rgb(255, 253, 127);
+}
+.main-container-dashboard .section-body .blocks .block18{
+    background-color: rgb(255, 127, 234);
+}
+.main-container-dashboard .section-body .blocks .block19{
+    background-color: rgb(157, 255, 127);
+}
+.main-container-dashboard .section-body .blocks .block20{
+    background-color: rgb(218, 31, 255);
+}
+.main-container-dashboard .section-body .blocks .block21{
+    background-color: rgb(131, 255, 127);
+}
+.main-container-dashboard .section-body .blocks .block22{
+    background-color: rgb(248, 50, 15);
+}
+.main-container-dashboard .section-body .blocks .block23{
+    background-color: rgb(37, 253, 181);
+}
+.main-container-dashboard .section-body .blocks .block24{
+    background-color: rgb(255, 129, 129);
+}
+ */
