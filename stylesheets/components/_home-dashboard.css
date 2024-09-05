@@ -198,11 +198,6 @@
     font-size: 16px;
 }
 
-
-
-
-
-
 /*----------- Main - Container -------------*/
 
 .main-container-dashboard{
@@ -215,12 +210,6 @@
     gap:0px;
     margin: 0px 0px 0px;
 }
-
-
-
-
-
-
 
 /*---- Side left------*/
 
@@ -266,7 +255,7 @@
     display: flex;
     flex-direction: column;
     visibility: hidden;
-    transform:translateX(-400%);
+    transform:translateX(-350%);
     transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out, width 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 .main-container-dashboard .section-menu .navbar-side-left .container-side-left .icon-equis {
@@ -603,6 +592,7 @@
     font-weight: 500;
     font-family: var(--body-font);
     color: var( --light-black);
+    cursor:pointer;
     background-color:var( --background-cards);
     border:2px solid var(--black);
     /* box-shadow: -4px 4px 8px 1px var(--black); */
