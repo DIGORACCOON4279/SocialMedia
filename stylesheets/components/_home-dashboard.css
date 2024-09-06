@@ -636,10 +636,10 @@
     visibility:visible;
 }
 .main-container-dashboard .section-body .blocks .block1{
-    background-image: url("/images/granny-hotpink.png");
+    background-image: url("/images/granny-hotpink.webp");
 }
 .main-container-dashboard .section-body .blocks .block2{
-    background-image: url("/images/grannyBlue.png");
+    background-image: url("/images/granny-blue.webp");
 }
 .main-container-dashboard .section-body .blocks .card .info{
     width:100%;
