@@ -638,7 +638,12 @@
     font-size: 16px;
     font-weight: 500;
     font-family: var(--body-font);
+}
+.main-container-dashboard .section-body .blocks .card-hotpink .info h3{
     color: var(--light-red-opacity);
+}
+.main-container-dashboard .section-body .blocks .card-blue .info h3{
+    color: var(--light-blue-opacity);
 }
 .main-container-dashboard .section-body .blocks .card .info p.paragraph{
     font-size: 12px;
