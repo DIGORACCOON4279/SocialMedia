@@ -601,7 +601,7 @@
 }
 .main-container-dashboard .section-body .blocks .card:hover .block{
     background-color:var( --background-black);
-    filter:blur(1px) grayscale(15%);
+    filter:grayscale(15%);
 }
 .main-container-dashboard .section-body .blocks .block{
     width:100%;
@@ -610,10 +610,31 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
-    filter:blur(0);
-    transition:  background-color 0.3s ease-in-out;
+    filter:grayscale(0%);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    overflow: hidden;
+    /* position:relative; */
+    transition: background-color 0.3s ease-in-out;
 }
+.main-container-dashboard .section-body .blocks .card .block1 .category,
+.main-container-dashboard .section-body .blocks .card .block2 .group{
+    transform: translate(0%) scale(90%);
+    opacity:0;
+    visibility:hidden;
 
+    /* position:absolute;
+    top:0px;
+    right:-40px; */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out ;
+}
+.main-container-dashboard .section-body .blocks .card:hover .block1 .category,
+.main-container-dashboard .section-body .blocks .card:hover .block2 .group{
+    transform: translate(0%) scale(70%);
+    opacity:1;
+    visibility:visible;
+}
 .main-container-dashboard .section-body .blocks .block1{
     background-image: url("/images/granny-hotpink.png");
 }
@@ -633,6 +654,7 @@
     justify-content:space-between;
     align-items: flex-start;
     gap:10px;
+
 }
 .main-container-dashboard .section-body .blocks .card .info h3{
     font-size: 16px;
