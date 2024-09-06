@@ -580,30 +580,99 @@
     align-items: center;
     gap:41px;
 }
-.main-container-dashboard .section-body .blocks .block{
-    width: 22%;
-    height: 220px;
-    padding: 30px;
+.main-container-dashboard .section-body .blocks .card{
+    width:22%;
+    /* width:auto; change */
+    height: auto;
     border-radius: 10px;
+    overflow: hidden;
+    cursor:pointer;
+    background-color:var(--dark);
     display: flex;
+    flex-direction: column;
+    justify-content:center;
     align-items: center;
-    place-content: center;
+    gap:10px;
+    box-shadow: 0px 0px 8px 1px var(--black);
+    transition:  box-shadow 0.3s ease-in-out;
+}
+.main-container-dashboard .section-body .blocks .card:hover{
+    box-shadow:0px 0px 24px 4px var(--black);
+}
+.main-container-dashboard .section-body .blocks .card:hover .block{
+    background-color:var( --background-black);
+    filter:blur(1px) grayscale(15%);
+}
+.main-container-dashboard .section-body .blocks .block{
+    width:100%;
+    /* width:200px;change */
+    height: 170px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    filter:blur(0);
+    transition:  background-color 0.3s ease-in-out;
+}
+
+.main-container-dashboard .section-body .blocks .block1{
+    background-image: url("/images/granny-hotpink.png");
+}
+.main-container-dashboard .section-body .blocks .block2{
+    background-image: url("/images/grannyBlue.png");
+}
+.main-container-dashboard .section-body .blocks .card .info{
+    width:100%;
+    height: auto;
+    padding:15px;
     font-size: 16px;
     font-weight: 500;
     font-family: var(--body-font);
-    color: var( --light-black);
-    cursor:pointer;
-    background-color:var( --background-cards);
-    border:2px solid var(--black);
-    /* box-shadow: -4px 4px 8px 1px var(--black); */
-    box-shadow:0px 0px 24px 4px var(--black);
+    color: var(--light-red-opacity);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: flex-start;
+    gap:10px;
+}
+.main-container-dashboard .section-body .blocks .card .info h3{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--body-font);
+    color: var(--light-red-opacity);
+}
+.main-container-dashboard .section-body .blocks .card .info p.paragraph{
+    font-size: 12px;
+    font-weight: 500;
+    font-family: var(--body-font);
+    color: var(--light-gray);
+}
+.main-container-dashboard .section-body .blocks .card a.link{
+    width:40%;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--body-font);
+    color: var(--light-gray);
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 0px 15px 15px;
+    border-radius: 5px;
+    place-self: self-end;
+    text-align: center;
     transition: 0.3s ease-in-out;
 }
-.main-container-dashboard .section-body .blocks .block:hover{
-    border:2px solid var(--light-red-opacity);
-    background-color: #1b1b1b;
-    color: var(--light-red-opacity);
-    box-shadow:inset -4px 4px 8px 1px var(--black);
+.main-container-dashboard .section-body .blocks .card-hotpink a.link{
+    background-color:var(--light-red-opacity) ;
+}
+.main-container-dashboard .section-body .blocks .card-hotpink a.link:hover{
+    color: var(--white);
+    background-color:var(--light-red) ;
+}
+.main-container-dashboard .section-body .blocks .card-blue a.link{
+    background-color:var(--light-blue-opacity) ;
+}
+.main-container-dashboard .section-body .blocks .card-blue a.link:hover{
+    color: var(--white);
+    background-color:var(--light-blue) ;
 }
 /* .main-container-dashboard .section-body .blocks .block1{
     background-color: rgb(75, 253, 194);
